@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Khajana</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Resto.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                KhanaKhajana
+            </div>
+            <div id="SearchBar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../Home/Home.html">Home</a></li>
+                <li><a href="../RestaurantPage/Resto.html">Restaurants</a></li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">R</div>
+                <span>User</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Resto Content -->
+    <Resto class="Resto-content container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Avilable Restaurants:</h1>
+        
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon primary">
+                        <i class="fas fa-store"></i>
+                    </div>
+                </div>
+                <div class="stat-value">2</div>
+                <div class="stat-label">Total Restaurants</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon success">
+                        <i class="fas fa-hamburger"></i>
+                    </div>
+                </div>
+                <div class="stat-value">3</div>
+                <div class="stat-label">Total Dishes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon warning">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                </div>
+                <div class="stat-value">1</div>
+                <div class="stat-label">Cities Covered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-icon info">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                </div>
+                <div class="stat-value">₹75</div>
+                <div class="stat-label">Avg. Dish Price</div>
+            </div>
+        </div>
+
+    
+
+        <!-- Restaurant Cards -->
+        <div class="restaurant-grid">
+     
+           
+        </div>
+
+       
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 RestaurantHub. Built with ❤️ for food lovers.</p>
+        </div>
+    </footer>
+</body>
+<script src="./Resto.js"></script>
+</html>

@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Models.DishModel;
@@ -54,9 +56,23 @@ public class RestaurantController {
         return null;
     }
 
-    @PostMapping("/add")
-    public void addRestaurants(RestaurantModel restaurant) {
+    @PostMapping("/add/restaurant")
+    public String addRestaurant(@RequestBody RestaurantModel restaurant) {
         restaurants.add(restaurant);
+         return "Restaurant Added Successfully!"; 
+    }
+    @PostMapping("/add/dish/{resName}")
+    public String addDish(@PathVariable String resName, @RequestBody DishModel dish) {
+        for(RestaurantModel r : restaurants)
+        {
+            if(resName.equalsIgnoreCase(r.name))
+            {
+                r.addDishes(dish);
+                return "Dish Added Successfully in "+r.name;
+            }
+        }
+        return "Cant Find The Name of this Restaurant!";
+
     }
 
     
