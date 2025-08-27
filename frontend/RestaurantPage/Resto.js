@@ -28,7 +28,7 @@ function displayRestaurants(data) {
                     <i class="fas fa-utensils"></i> ${r.dishes.length} Dish Available 
                 </div> 
                 <div class="restaurant-actions"> 
-                    <a href="#view" class="btn btn-info btn-sm"> 
+                    <a href="../DishPage/Dish.html?name=${r.name}" class="btn btn-info btn-sm"> 
                     <i class="fas fa-eye"></i> View Menu </a> 
                    
                 </div> 

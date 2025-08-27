@@ -56,7 +56,7 @@ public class RestaurantController {
         return null;
     }
 
-    @PostMapping("/add/restaurant")
+    @PostMapping("/add")
     public String addRestaurant(@RequestBody RestaurantModel restaurant) {
         restaurants.add(restaurant);
          return "Restaurant Added Successfully!"; 
